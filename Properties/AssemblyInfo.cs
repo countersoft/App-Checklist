@@ -1,12 +1,12 @@
 using System.Reflection;
 using System.Security;
 
-[assembly: AssemblyTitle("Countersoft Gemini Checklist App")]
-[assembly: AssemblyDescription("Countersoft Gemini Checklist App")]
+[assembly: AssemblyTitle("Checklist")]
+[assembly: AssemblyDescription("Checklist")]
 
 [assembly: AssemblyCompany("Countersoft Limited")]
 [assembly: AssemblyProduct("Gemini Project Tracking Platform")]
-[assembly: AssemblyCopyright("Copyright © Countersoft 2003-2012")]
+[assembly: AssemblyCopyright("Copyright © Countersoft 2003-2014")]
 [assembly: AssemblyTrademark("Countersoft")]
 
 [assembly: AssemblyConfiguration("")]

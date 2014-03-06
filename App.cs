@@ -33,7 +33,7 @@ namespace Checklist
     AppControlGuid("C8F0693D-129C-4D19-9865-9CED964F06AB"),
     AppAuthor("Countersoft"),
     AppKey("Checklist"), 
-    AppName("Item Checklist"),
+    AppName("Checklist"),
     AppDescription("Apply checklist to any item type")]
     public class Checklist : BaseAppController
     {        
