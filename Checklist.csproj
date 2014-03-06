@@ -40,15 +40,33 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Countersoft.Foundation.Commons">
-      <HintPath>..\..\Libs\Countersoft.Foundation.Commons.dll</HintPath>
+    <Reference Include="Countersoft.Foundation.Commons, Version=5.0.0.3530, Culture=neutral, PublicKeyToken=0e17ff0349390ca9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Countersoft.Foundation.Commons.dll</HintPath>
     </Reference>
-    <Reference Include="Countersoft.Foundation.Contracts">
-      <HintPath>..\..\Libs\Countersoft.Foundation.Contracts.dll</HintPath>
+    <Reference Include="Countersoft.Foundation.Contracts, Version=5.0.0.3530, Culture=neutral, PublicKeyToken=0e17ff0349390ca9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Countersoft.Foundation.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Countersoft.Gemini, Version=6.1.0.4081, Culture=neutral, PublicKeyToken=7d1cd24c5b90fda4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Countersoft.Gemini.dll</HintPath>
+    </Reference>
+    <Reference Include="Countersoft.Gemini.Commons, Version=6.1.0.4081, Culture=neutral, PublicKeyToken=7d1cd24c5b90fda4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Countersoft.Gemini.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="Countersoft.Gemini.Contracts, Version=6.1.0.4081, Culture=neutral, PublicKeyToken=7d1cd24c5b90fda4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Countersoft.Gemini.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Countersoft.Gemini.Extensibility, Version=6.1.0.4081, Culture=neutral, PublicKeyToken=7d1cd24c5b90fda4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Countersoft.Gemini.Extensibility.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.10.1, Culture=neutral, PublicKeyToken=3aeec8c590ff36f5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libs\log4net.dll</HintPath>
+      <HintPath>libs\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,24 +85,6 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Countersoft.Gemini.Commons\Countersoft.Gemini.Commons.csproj">
-      <Project>{764AF5D2-B7F8-4BD0-A6FA-225AE9E029A4}</Project>
-      <Name>Countersoft.Gemini.Commons</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Countersoft.Gemini.Contracts\Countersoft.Gemini.Contracts.csproj">
-      <Project>{1129D179-E244-47B8-9FBF-D334EDD3B4CD}</Project>
-      <Name>Countersoft.Gemini.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Countersoft.Gemini.Extensibility\Countersoft.Gemini.Extensibility.csproj">
-      <Project>{C3A31DEB-4B56-4AD8-9C7F-EA301FA482B7}</Project>
-      <Name>Countersoft.Gemini.Extensibility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Countersoft.Gemini\Countersoft.Gemini.csproj">
-      <Project>{28311A41-CF74-47AD-892F-956E6E93CE0B}</Project>
-      <Name>Countersoft.Gemini</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest">
@@ -106,13 +106,7 @@ del $(ProjectDir)$(TargetName).pdb
 rem copy $(TargetDir)$(TargetName).pdb $(ProjectDir)$(TargetName).pdb
 
 del $(ProjectDir)$(TargetName).zip
-$(SolutionDir)Apps\7za.exe a $(ProjectDir)$(TargetName).zip $(ProjectDir)*.dll $(ProjectDir)*.pdb $(ProjectDir)*.manifest $(ProjectDir)views $(ProjectDir)*.css 
-
-copy $(ProjectDir)$(TargetName).zip $(SolutionDir)Countersoft.Gemini\App_Data\apps
-
-del $(ProjectDir)$(TargetName).dll
-del $(ProjectDir)$(TargetName).pdb
-del $(ProjectDir)$(TargetName).zip</PostBuildEvent>
+$(ProjectDir)libs\7za.exe a $(TargetDir)$(TargetName).zip $(ProjectDir)*.dll $(ProjectDir)*.pdb $(ProjectDir)*.manifest $(ProjectDir)views $(ProjectDir)*.css</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
