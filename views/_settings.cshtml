@@ -26,7 +26,7 @@
     {
         initDatatablesWithEdit("#table-admin-checklist", { "bPaginate": false, "bFilter": false, "bInfo": false });
 
-        $("#table-admin-checklist_wrapper").prepend("<div class='left' style='padding:6px'><input type='text' name='checklist-title' id='checklist-title' placeholder='Enter checklist item' class='input-size15 margin-right-5' /><input type='button' name='add-checklist' id='add-checklist' value='Add' class='button-primary' /></div>");
+        $("#table-admin-checklist_wrapper").prepend("<div class='left' style='padding:6px'><input type='text' name='checklist-title' id='checklist-title' placeholder='Enter checklist item' class='input-size9 margin-right-5' /><input type='button' name='add-checklist' id='add-checklist' value='Add' class='button-primary' /></div>");
 
         $('#add-checklist').unbind("click").bind("click", function () {
             checklist_app.postNewItem();
