@@ -5,7 +5,7 @@
     {
         <p>
             <input class="checklist-app-checkbox fancy" type="checkbox" id="checkbox-@item.CheckId" data-check-id="@item.CheckId" @if(item.Checked){ <text> checked="checked" </text>  } />
-            <label for="checkbox-@item.CheckId">@item.CheckName</label>
+            <label for="checkbox-@item.CheckId">@item.CheckTitle</label>
             @if (item.Checked)
             {
                 <span>@item.CheckedBy, @item.CheckedDate.ToString("d MMM yyyy HH:mm")</span>

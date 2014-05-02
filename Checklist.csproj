@@ -83,6 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChecklistModel.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,9 +93,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="views\_settings.cshtml" />
+    <None Include="views\settings.cshtml" />
     <None Include="views\checklist.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Checklist.js" />
     <Content Include="Checklist.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -106,7 +110,7 @@ del $(ProjectDir)$(TargetName).pdb
 rem copy $(TargetDir)$(TargetName).pdb $(ProjectDir)$(TargetName).pdb
 
 del $(ProjectDir)$(TargetName).zip
-$(ProjectDir)libs\7za.exe a $(TargetDir)$(TargetName).zip $(ProjectDir)*.dll $(ProjectDir)*.pdb $(ProjectDir)*.manifest $(ProjectDir)views $(ProjectDir)*.css</PostBuildEvent>
+$(ProjectDir)libs\7za.exe a $(TargetDir)$(TargetName).zip $(ProjectDir)*.dll $(ProjectDir)*.pdb $(ProjectDir)*.manifest $(ProjectDir)views $(ProjectDir)*.css $(ProjectDir)*.js</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
