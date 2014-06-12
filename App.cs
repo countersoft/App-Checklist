@@ -21,7 +21,7 @@ namespace Checklist
     AppName("Checklist"),
     AppDescription("Apply checklist to any item type"),
     AppRequiresConfigScreen(true)]
-    public class App : BaseAppController
+    public class Checklist : BaseAppController
     {        
         private IssueWidgetData<List<ChecklistData>> GetData(IssueDto issue)
         {
