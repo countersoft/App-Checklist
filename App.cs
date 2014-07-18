@@ -21,6 +21,7 @@ namespace Checklist
     AppName("Checklist"),
     AppDescription("Apply checklist to any item type"),
     AppRequiresConfigScreen(true)]
+    [OutputCache(Duration = 0, NoStore = true, Location = System.Web.UI.OutputCacheLocation.None)]
     public class Checklist : BaseAppController
     {        
         private IssueWidgetData<List<ChecklistData>> GetData(IssueDto issue)
