@@ -48,6 +48,8 @@ namespace Checklist
                 }
                 else
                 {
+                    existingItem.CheckedDate = existingItem.CheckedDate.ToLocal(UserContext.User.TimeZone);
+
                     existingItem.CheckTitle = item.Title;
                     result.Value.Add(existingItem);                    
                 }
