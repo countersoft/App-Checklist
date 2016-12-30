@@ -55,6 +55,8 @@ namespace Checklist
                 }
             }
 
+            result.Value.Sort((x, y) => x.CheckTitle.HasValue() ? x.CheckTitle.CompareTo(y.CheckTitle) : -1);
+
             return result;
         }
 
