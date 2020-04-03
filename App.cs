@@ -36,11 +36,11 @@ namespace Checklist
 
             if (templateData == null) return result;
 
-            IssueWidgetData<List<ChecklistData>> IssueData = GeminiContext.IssueWidgetStore.Get<List<ChecklistData>>(issue.Id, AppGuid, AppControlGuid);
+            IssueWidgetData<List<ChecklistData>> issueData = GeminiContext.IssueWidgetStore.Get<List<ChecklistData>>(issue.Id, AppGuid, AppControlGuid);
 
             foreach(var item in templateData.Items)
             {
-                ChecklistData existingItem = IssueData != null && IssueData.Value != null && IssueData.Value.Count > 0 ? IssueData.Value.Find(s => s.CheckId == item.Id) : null;
+                ChecklistData existingItem = issueData != null && issueData.Value != null && issueData.Value.Count > 0 ? issueData.Value.Find(s => s.CheckId == item.Id) : null;
 
                 if (existingItem == null)
                 {

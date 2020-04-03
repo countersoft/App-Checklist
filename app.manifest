@@ -2,10 +2,10 @@
     <guid>8FAC8849-04C0-418B-BC3B-E30A815A3E7A</guid>
     <name>Checklist</name>
     <description>Apply checklist to any item type</description>
-    <version-major>3</version-major>
+    <version-major>7</version-major>
     <version-minor>0</version-minor>
     <version-patch>0</version-patch>
     <publisher>Countersoft</publisher>
-    <released>2019-01-10T11:31:00Z</released>
+    <released>2010-04-10T09:00:00Z</released>
     <debug>false</debug>
 </app>
