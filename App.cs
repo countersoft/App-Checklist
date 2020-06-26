@@ -19,6 +19,7 @@ namespace Checklist
     AppAuthor("Countersoft"),
     AppKey("Checklist"), 
     AppName("Checklist"),
+    AppIcon("clipboard-check"),
     AppDescription("Apply checklist to any item type"),
     AppRequiresConfigScreen(true)]
     [OutputCache(Duration = 0, NoStore = true, Location = System.Web.UI.OutputCacheLocation.None)]
